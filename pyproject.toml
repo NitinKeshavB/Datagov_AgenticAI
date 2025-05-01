@@ -9,7 +9,10 @@ authors = [{ name = "Nitin Keshav", email = "nitin.keshav11@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.7"
 license = { text = "MIT" }
-dependencies = []
+dependencies = [
+    "requests",
+    'importlib-metadata; python_version<"3.13"',
+]
 classifiers = ["Programming Language :: Python :: 3"]
 keywords = ["one", "two"]
 
@@ -34,7 +37,7 @@ static-code-qa = [
     "Flake8-pyproject",
     "radon",
 ]
-# Installing dev depenendencies in your virtual env makes it so that during development VS Code can 
+# Installing dev depenendencies in your virtual env makes it so that during development VS Code can
 # - surface linting errors
 # - automatically apply formatting
 # - show enhanced autocompletion for stubs libraries
@@ -45,6 +48,7 @@ dev = ["openmetadata_catalog[test,release,static-code-qa]"]
 # Minimum requirements for the build system to execute.
 requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
 
 # include more than only .py files in the distribution package (wheel)
 [tool.setuptools.package-data]
