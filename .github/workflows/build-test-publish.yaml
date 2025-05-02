@@ -55,6 +55,9 @@ jobs:
       - name: Install build CLI
         run: |
           pip install build
+      - name: Install dependencies
+        run: |
+          /bin/bash -x run.sh install
       - name: Build python package
         run: |
           /bin/bash -x run.sh build
