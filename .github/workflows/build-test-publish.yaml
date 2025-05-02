@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       deploy:
-        description: Deploy if tests successful
+        description: Deploy if tests  successful
         required: true
         type: boolean
         default: false
